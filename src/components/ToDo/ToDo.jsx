@@ -1,8 +1,9 @@
-import React, { useContext } from 'react'
+import React from 'react'
+import { useDispatch } from 'react-redux'
 import CheckList from '../CheckList/CheckList'
 import { ToDoContext } from '../../context/ToDoContext/ToDoContext'
 function ToDo({ todoItem }) {
-    const { dispatch } = useContext(ToDoContext)
+    const dispatch = useDispatch()
     return (
         <ul>
             <li>

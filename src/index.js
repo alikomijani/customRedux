@@ -2,15 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App.jsx";
-import ToDoContextProvider from "./context/ToDoContext/ToDoContext";
-
+// import ToDoContextProvider from "./context/ToDoContext/ToDoContext";
+import store from "./store/store";
 import * as serviceWorker from "./serviceWorker";
-
+import { Provider } from "react-redux";
 ReactDOM.render(
   <React.StrictMode>
-    <ToDoContextProvider>
+    <Provider store={store}>
       <App />
-    </ToDoContextProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
